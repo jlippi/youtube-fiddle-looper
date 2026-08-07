@@ -46,6 +46,17 @@
   background: #0056b3;
 }
 
+#btn-shift-start {
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  background: #17a2b8;
+}
+
+#btn-shift-start:hover {
+  background: #138496;
+}
+
 #btn-toggle-loop {
   width: 100%;
   padding: 10px;

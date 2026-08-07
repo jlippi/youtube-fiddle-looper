@@ -4,6 +4,7 @@ A lightweight browser extension that lets you loop specific sections of a YouTub
 
 ## ✨ Features
 * **Custom Loops:** Set precise Start and End times for any phrase.
+* **Phrase Stepping:** Use **End ➔ Start & Play** to quickly set the start time to your previous phrase's end time, stopping active loops and continuing playback into the next phrase.
 * **Practice Delay:** Add a delay (e.g., 2 seconds) between loops so you have time to play the phrase back on your instrument.
 * **Speed Control:** Slow down the video to hear the tricky parts clearly, without losing pitch.
 
@@ -37,3 +38,4 @@ You can install this directly into your browser in less than a minute.
 4. Play to the end of the phrase, and click **Set End**.
 5. Set your **Delay** (in seconds) and your **Speed** (e.g., 0.75 for 75% speed).
 6. Click **Start Loop** and start practicing!
+7. When you are ready for the next phrase, click **End ➔ Start & Play** to shift your start timestamp, stop looping, and resume playback.

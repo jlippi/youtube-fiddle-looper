@@ -29,6 +29,8 @@ function init() {
             <input type="number" id="inp-end" value="5.0" step="0.1">
         </div>
         
+        <button id="btn-shift-start" title="Set Start time to End time and play without looping">End ➔ Start & Play</button>
+        
         <div class="looper-row">
             <span style="font-size:14px;">Delay (sec):</span>
             <input type="number" id="inp-delay" value="2.0" step="0.5">
@@ -52,6 +54,28 @@ function init() {
     document.getElementById('btn-set-end').addEventListener('click', () => {
         const video = document.querySelector('video');
         if(video) document.getElementById('inp-end').value = video.currentTime.toFixed(2);
+    });
+
+    document.getElementById('btn-shift-start').addEventListener('click', () => {
+        const video = document.querySelector('video');
+        const endVal = document.getElementById('inp-end').value;
+        document.getElementById('inp-start').value = endVal;
+        
+        if (isLooping) {
+            isLooping = false;
+            stopLoop();
+            const toggleBtn = document.getElementById('btn-toggle-loop');
+            if (toggleBtn) {
+                toggleBtn.innerText = 'Start Loop';
+                toggleBtn.classList.remove('looping');
+            }
+        }
+        
+        if (video) {
+            video.currentTime = parseFloat(endVal);
+            applySpeed();
+            video.play();
+        }
     });
 
     document.getElementById('inp-speed').addEventListener('input', () => {
