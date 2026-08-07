@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Fiddle Looper",
+  "version": "1.1",
+  "description": "Loop specific sections of a YouTube video with a delay and speed control to practice instruments.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+#yt-looper-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(20, 20, 20, 0.95);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 999999;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 2px solid #555;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  width: 210px;
+}
+
+#yt-looper-panel .looper-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#yt-looper-panel input, #yt-looper-panel select {
+  width: 70px;
+  background: #333;
+  color: white;
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+}
+
+#yt-looper-panel button {
+  background: #065fd4;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#yt-looper-panel button:hover {
+  background: #0056b3;
+}
+
+#btn-toggle-loop {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: #28a745;
+}
+
+#btn-toggle-loop.looping {
+  background: #dc3545;
+}
