@@ -29,17 +29,11 @@ jobs:
           path: youtube-fiddle-looper.zip
 
       - name: Create or Update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: youtube-fiddle-looper.zip
+          tag_name: latest
+          name: "YouTube Fiddle Looper (Latest Release)"
+          body: "Ready-to-install browser extension package. For Firefox, download 'youtube-fiddle-looper.zip' and load directly in about:debugging without extracting."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TAG="latest"
-          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
-            TAG="${GITHUB_REF#refs/tags/}"
-          fi
-          
-          # Create release if it doesn't exist, or update assets if it does
-          gh release create "$TAG" youtube-fiddle-looper.zip \
-            --title "YouTube Fiddle Looper ($TAG)" \
-            --notes "Ready-to-install browser extension package. For Firefox, download 'youtube-fiddle-looper.zip' and load directly in about:debugging without extracting." \
-            --clobber || \
-          gh release upload "$TAG" youtube-fiddle-looper.zip --clobber
