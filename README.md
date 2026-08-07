@@ -12,24 +12,23 @@ A lightweight browser extension that lets you loop specific sections of a YouTub
 
 You can install this directly into your browser in less than a minute.
 
-**Step 1: Download the Extension**
-1. Click the green **"<> Code"** button at the top right of this page.
-2. Click **"Download ZIP"**.
-3. Extract the downloaded ZIP file to a folder on your computer.
+**Step 1: Download the Extension Package**
+1. Go to the **Releases** section on the right side of this GitHub page.
+2. Download `youtube-fiddle-looper.zip` under **Assets**.
 
 **Step 2: Add it to your Browser**
 
-**For Chrome / Edge / Brave:**
-1. Open your browser and type `chrome://extensions/` into the address bar.
-2. In the top right corner, turn on **Developer mode**.
-3. Click the **Load unpacked** button in the top left.
-4. Select the folder you extracted in Step 1.
-
-**For Firefox:**
+**For Firefox:** *(No extraction required!)*
 1. Open Firefox and type `about:debugging` into the address bar.
 2. Click **This Firefox** on the left menu.
 3. Click **Load Temporary Add-on...**
-4. Navigate to the extracted folder and select the `manifest.json` file.
+4. Select the downloaded `youtube-fiddle-looper.zip` file directly.
+
+**For Chrome / Edge / Brave:**
+1. Extract `youtube-fiddle-looper.zip` on your computer.
+2. Open your browser and type `chrome://extensions/` into the address bar.
+3. In the top right corner, turn on **Developer mode**.
+4. Click the **Load unpacked** button in the top left and select the extracted folder.
 
 ## 🎵 How to Use
 1. Go to any YouTube video.
