@@ -1,0 +1,45 @@
+name: Build & Release Extension
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Package Extension ZIP
+        run: |
+          zip -r youtube-fiddle-looper.zip manifest.json content.js style.css README.md
+
+      - name: Upload Workflow Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-fiddle-looper
+          path: youtube-fiddle-looper.zip
+
+      - name: Create or Update GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="latest"
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            TAG="${GITHUB_REF#refs/tags/}"
+          fi
+          
+          # Create release if it doesn't exist, or update assets if it does
+          gh release create "$TAG" youtube-fiddle-looper.zip \
+            --title "YouTube Fiddle Looper ($TAG)" \
+            --notes "Ready-to-install browser extension package. For Firefox, download 'youtube-fiddle-looper.zip' and load directly in about:debugging without extracting." \
+            --clobber || \
+          gh release upload "$TAG" youtube-fiddle-looper.zip --clobber
