@@ -91,6 +91,8 @@ function init() {
             <input type="number" id="inp-speed" value="1.0" step="0.05" min="0.1" max="2.0">
         </div>
 
+        <button id="btn-toggle-loop">Start Loop</button>
+
         <div class="looper-row">
             <span style="font-size:13px; font-weight: 500;">Pitch (st):</span>
             <input type="number" id="inp-pitch" value="0" step="1" min="-12" max="12">
@@ -102,8 +104,6 @@ function init() {
         </div>
         
         <button id="btn-pitch-reset" title="Reset Pitch and Cents to 0">Reset Pitch</button>
-
-        <button id="btn-toggle-loop">Start Loop</button>
     `;
     
     document.body.appendChild(panel);
