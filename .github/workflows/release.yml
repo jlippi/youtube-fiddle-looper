@@ -20,7 +20,8 @@ jobs:
 
       - name: Package Extension ZIP
         run: |
-          zip -r youtube-fiddle-looper.zip manifest.json content.js style.css README.md
+          chmod +x package.sh
+          ./package.sh
 
       - name: Upload Workflow Artifact
         uses: actions/upload-artifact@v4
