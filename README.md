@@ -8,7 +8,7 @@ A lightweight browser extension that lets you loop specific sections of a YouTub
 * **Practice Delay:** Add a delay (e.g., 2 seconds) between loops so you have time to play the phrase back on your instrument.
 * **Speed Control:** Slow down the video to hear the tricky parts clearly, without losing pitch.
 
-## 🚀 How to Install (No coding required!)
+## 🚀 How to Install
 
 You can install this directly into your browser in less than a minute.
 
@@ -18,7 +18,7 @@ You can install this directly into your browser in less than a minute.
 
 **Step 2: Add it to your Browser**
 
-**For Firefox:** *(No extraction required!)*
+**For Firefox:**
 1. Open Firefox and type `about:debugging` into the address bar.
 2. Click **This Firefox** on the left menu.
 3. Click **Load Temporary Add-on...**
